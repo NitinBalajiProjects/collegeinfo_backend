@@ -1,1 +1,1 @@
-# collegeinfo_backend
+# collegeinfo backend service (Updated - V2)
