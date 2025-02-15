@@ -10,5 +10,13 @@ def home():
 def get_info():
     return jsonify({"college": "XYZ University", "location": "New York"})
 
+@app.route("/compsci")
+def get_compsci():
+    return None
+
+@app.route("/national")
+def get_national():
+    return None
+
 if __name__ == "__main__":
     app.run(debug=True, port=5000)
