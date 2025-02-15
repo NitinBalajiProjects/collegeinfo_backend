@@ -1,4 +1,5 @@
 from flask import Flask, jsonify
+from util import ExcelToJsonUtil
 
 app = Flask(__name__)
 
@@ -12,11 +13,11 @@ def get_info():
 
 @app.route("/compsci")
 def get_compsci():
-    return None
+    return ExcelToJsonUtil.convert_to_json("data/CompScienceRanking.xlsx")
 
 @app.route("/national")
 def get_national():
-    return None
+    return ExcelToJsonUtil.convert_to_json("data/NationalUnivRanking.xlsx")
 
 if __name__ == "__main__":
     app.run(debug=True, port=5000)
